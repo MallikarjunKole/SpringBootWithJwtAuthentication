@@ -1,0 +1,12 @@
+CREATE TABLE users (
+  user_id bigint NOT NULL AUTO_INCREMENT,
+  email varchar(50) DEFAULT NULL,
+  password varchar(120) DEFAULT NULL,
+  username varchar(20) DEFAULT NULL,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_by VARCHAR(100) NOT NULL,
+  created_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_by VARCHAR(100),
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id)
+)
